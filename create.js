@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+
+/**
+ * @license Copyright (c) 2015-2018 Radiant Media Player 
+ * rmp-create-vtt-thumbnails 0.1.0 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
+ */
+
 'use strict';
 
 const fs = require('fs');
@@ -84,7 +90,7 @@ process.argv.forEach((value, index) => {
 // delete VTT file if already exists
 try {
   fs.unlinkSync(outputVTTFileName);
-  console.log(outputVTTFileName + ' already exist - deleted it');
+  console.log(outputVTTFileName + ' already exists - deleted it');
 } catch (err) {
   if (err && err.code === 'ENOENT') {
     console.log(outputVTTFileName + ' does not exist - will create it');
