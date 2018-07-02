@@ -1,6 +1,6 @@
 # rmp-create-vtt-thumbnails
 
-An helper script to easily create VTT files that works with [Radiant Media Player preview thumbnails feature](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html).
+A helper script to easily create VTT files that works with [Radiant Media Player preview thumbnails feature](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html).
 
 First you will need to create a mosaic of thumbnails with FFmpeg [as described here](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html#preview-thumbnails-ffmpeg).
 
@@ -8,7 +8,7 @@ Once this is done you can download this script to automatically create a VTT fil
 
 For more information on the VTT format used [see this documentation section](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html#preview-thumbnails-introduction).
 
-This script (create.js) is in alpha stage and may need improvement. It has been tested for node.js 8.11+ on Windows 10.
+This script (create.js) is in alpha stage and may need improvement. It has been tested for node.js 8.11+ on Windows 10 and Ubuntu 16 LTS.
 
 ## Usage from the command line
 ```
@@ -22,19 +22,21 @@ See assets/ folder for ready-to-use mosaic image examples. See output/ folder fo
 
 `node create.js duration spriteFileLocation outputVTTFileName gapBetweenFrames thumbnailWidth thumbnailHeight tileSize`
 
+All parameters are mandatory.
+
 `duration`: content duration in seconds
 
-`spriteFileLocation`: location for the mosaic image (a.k.a. sprite image)
+`spriteFileLocation`: location for the mosaic image (a.k.a. sprite image) to reference in the resulting VTT file
 
-`outputVTTFileName`: location to write the output VTT file related to the input `spriteFileLocation`
+`outputVTTFileName`: location for the produced output VTT file
 
-`gapBetweenFrames`: the gap in seconds between frame extraction
+`gapBetweenFrames`: the gap in seconds between frame extraction (value used for generating the mosaic image with FFmpeg)
 
-`thumbnailWidth`: the thumbnail width within the mosaic
+`thumbnailWidth`: the width of each thumbnail within the mosaic
 
-`thumbnailHeight`: the thumbnail height within the mosaic
+`thumbnailHeight`: the height of each thumbnail within the mosaic
 
-`tileSize`: the tile format used to generate the mosaic (example 11 for 11x11, 6 for 6x6 ...) 
+`tileSize`: the tile format used to generate the mosaic (value used for generating the mosaic image with FFmpeg: 11 for 11x11, 6 for 6x6 ...) 
 
 ## Issues
 Issues should be submitted in this GitHub page. We will do our best to review them.
