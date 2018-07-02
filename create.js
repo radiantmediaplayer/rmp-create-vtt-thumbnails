@@ -2,7 +2,7 @@
 
 /**
  * @license Copyright (c) 2015-2018 Radiant Media Player 
- * rmp-create-vtt-thumbnails 0.1.0 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
+ * rmp-create-vtt-thumbnails 0.1.1 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
  */
 
 'use strict';
@@ -86,6 +86,12 @@ process.argv.forEach((value, index) => {
       break;
   }
 });
+
+
+if (!duration || !spriteFileLocation || !outputVTTFileName || !gapBetweenFrames || !thumbnailWidth || !thumbnailHeight || !tileSize) {
+  console.log('Error: missing or invalid parameters in the command line');
+  return;
+}
 
 // delete VTT file if already exists
 try {
