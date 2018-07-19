@@ -2,7 +2,7 @@
 
 /**
  * @license Copyright (c) 2015-2018 Radiant Media Player 
- * rmp-create-vtt-thumbnails 0.1.1 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
+ * rmp-create-vtt-thumbnails 0.1.2 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
  */
 
 'use strict';
@@ -11,7 +11,7 @@ const fs = require('fs');
 const eol = require('os').EOL;
 
 // function to append data to our output VTT file
-var _appendFileSync = function (file, data) {
+const _appendFileSync = function (file, data) {
   try {
     fs.appendFileSync(file, data);
   } catch (err) {
@@ -21,7 +21,7 @@ var _appendFileSync = function (file, data) {
 
 // function to convert second-based time to HH:MM:SS.xxxx format required for VTT compliance
 // see https://www.w3.org/TR/webvtt1/#webvtt-timestamp
-var _secondsToHRTime = function (time) {
+const _secondsToHRTime = function (time) {
   if (typeof time === 'number' && time >= 0) {
     let seconds = Math.floor(time % 60);
     let minutes = Math.floor(time * 1.0 / 60);
@@ -52,13 +52,13 @@ var _secondsToHRTime = function (time) {
 // parsing input from our command line 
 // input params are: duration spriteFileLocation outputVTTFileName gapBetweenFrames thumbnailWidth thumbnailHeight tileSize
 // example: node create.js 596 assets/bbb-sprite.jpg output/bbb-thumbnails.vtt 5 128 72 11
-var duration;
-var spriteFileLocation;
-var outputVTTFileName;
-var gapBetweenFrames;
-var thumbnailWidth;
-var thumbnailHeight;
-var tileSize;
+let duration;
+let spriteFileLocation;
+let outputVTTFileName;
+let gapBetweenFrames;
+let thumbnailWidth;
+let thumbnailHeight;
+let tileSize;
 process.argv.forEach((value, index) => {
   switch (index) {
     case 2:
@@ -104,12 +104,12 @@ try {
 }
 
 // append our initial VTT data for spec compliance
-var initialData = 'WEBVTT' + eol + eol;
+const initialData = 'WEBVTT' + eol + eol;
 _appendFileSync(outputVTTFileName, initialData);
 
 // initial variables values for our loop
-var itemNumber = Math.floor(duration / gapBetweenFrames) + 1;
-var currentTime = 0;
+const itemNumber = Math.floor(duration / gapBetweenFrames) + 1;
+let currentTime = 0;
 let xCoordinates = 0;
 let yCoordinates = 0;
 let thumbnailSizeString = ',' + thumbnailWidth + ',' + thumbnailHeight + eol + eol;
