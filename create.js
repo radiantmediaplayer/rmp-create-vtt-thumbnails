@@ -87,8 +87,10 @@ process.argv.forEach((value, index) => {
   }
 });
 
-
-if (!duration || !spriteFileLocation || !outputVTTFileName || !gapBetweenFrames || !thumbnailWidth || !thumbnailHeight || !tileSize) {
+if (
+  [duration, gapBetweenFrames, thumbnailWidth, thumbnailHeight, tileSize].every(x => typeof x !== 'number') &&
+  (!duration || !spriteFileLocation || !outputVTTFileName || !gapBetweenFrames || !thumbnailWidth || !thumbnailHeight || !tileSize)
+  ) {
   console.log('Error: missing or invalid parameters in the command line');
   return;
 }
