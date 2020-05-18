@@ -7,7 +7,7 @@ This process has been tested for node.js 8.11+ on Windows 10 and Ubuntu 16 LTS.
 ## Documentation sections
 - [Create the mosaic of images](#create-the-mosaic-of-images)
 - [Create a VTT file that documents the mosaic of thumbnails](#create-a-vtt-file-that-documents-the-mosaic-of-thumbnails)
-- [create.js parameters documentation](#parameters-documentation)
+- [Parameters documentation](#parameters-documentation)
 - [Issues](#issues)
 - [License for rmp-create-vtt-thumbnails](#license-for-rmp-create-vtt-thumbnails)
 - [Radiant Media Player](#radiant-media-player)
