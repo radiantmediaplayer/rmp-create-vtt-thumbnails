@@ -1,13 +1,23 @@
 # rmp-create-vtt-thumbnails
 
-A helper script to easily create VTT files that works with [Radiant Media Player preview thumbnails feature](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html) (could work with other players that follow the same VTT-based preview thumbnails implementation). This process has been tested for node.js 8.11+ on Windows 10 and Ubuntu 16 LTS.
+A helper script to easily create VTT files that works with [Radiant Media Player preview thumbnails feature](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html) (could work with other players that follow the same VTT-based preview thumbnails implementation). 
 
-## Create the mosaic of images (a.k.a thumbnail sprites)
+This process has been tested for node.js 8.11+ on Windows 10 and Ubuntu 16 LTS.
+
+## Documentation sections
+- [Create the mosaic of images](#create-the-mosaic-of-images)
+- [Create a VTT file that documents the mosaic of thumbnails](#create-a-vtt-file-that-documents-the-mosaic-of-thumbnails)
+- [create.js parameters documentation](#create.js-parameters-documentation)
+- [Issues](#issues)
+- [License for rmp-create-vtt-thumbnails](#license-for-rmp-create-vtt-thumbnails)
+- [Radiant Media Player](#radiant-media-player)
+
+## Create the mosaic of images
 
 First you will need to create a mosaic of thumbnails with FFmpeg:
 
 - install [FFmpeg](https://www.ffmpeg.org/download.html) for your platform
-- get a MP4 file from the video you want to extract thumbnails from. A low quality version of that video will do
+- get a MP4 file from the video you want to extract thumbnails from - a low quality version of that video will do
 - use the below command line to create the mosaic of iamges:
 
 ```bash
@@ -34,7 +44,7 @@ node create.js 596 assets/bbb-sprite.jpg output/bbb-thumbnails.vtt 5 128 72 11
 ```
 See assets/ folder for ready-to-use mosaic image examples. See output/ folder for examples of VTT files generated with the create.js script.
 
-## Parameters docs
+## create.js parameters documentation
 
 `node create.js duration spriteFileLocation outputVTTFileName gapBetweenFrames thumbnailWidth thumbnailHeight tileSize`
 
@@ -60,9 +70,11 @@ Issues should be submitted in this GitHub page. We will do our best to review th
 ## License for rmp-create-vtt-thumbnails
 rmp-create-vtt-thumbnails is released under MIT.
 
-## License for Radiant Media Player
+## Radiant Media Player
 Radiant Media Player is a commercial HTML5 media player, not covered by the above MIT license. 
 
 Radiant Media Player license can be found here: [https://www.radiantmediaplayer.com/terms-of-service.html](https://www.radiantmediaplayer.com/terms-of-service.html). 
 
 You may request a free trial for Radiant Media Player at: [https://www.radiantmediaplayer.com/free-trial.html](https://www.radiantmediaplayer.com/free-trial.html).
+
+[Back to documentation sections](#documentation-sections)
