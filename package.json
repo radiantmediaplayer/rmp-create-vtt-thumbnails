@@ -1,4 +1,28 @@
 {
   "name": "rmp-create-vtt-thumbnails",
-  "version": "0.1.2"
+  "version": "0.1.3",
+  "author": "Radiant Media Player <support@radiantmediaplayer.com>",
+  "description": "Generate a VTT file and mosaic of thumbnails for Radiant Media Player preview thumbnails feature",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails.git"
+  },
+  "main": "create.js",
+  "keywords": [
+    "thumbnails",
+    "thumbnail",
+    "preview",
+    "VTT",
+    "ffmpeg",
+    "image",
+    "sprite",
+    "video",
+    "html5",
+    "player"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails/issues"
+  },
+  "homepage": "https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html"
 }

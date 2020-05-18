@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * @license Copyright (c) 2015-2018 Radiant Media Player 
- * rmp-create-vtt-thumbnails 0.1.2 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
+ * @license Copyright (c) 2015-2020 Radiant Media Player 
+ * rmp-create-vtt-thumbnails 0.1.3 | https://github.com/radiantmediaplayer/rmp-create-vtt-thumbnails
  */
 
 'use strict';
