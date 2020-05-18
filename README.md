@@ -7,7 +7,7 @@ This process has been tested for node.js 8.11+ on Windows 10 and Ubuntu 16 LTS.
 ## Documentation sections
 - [Create the mosaic of images](#create-the-mosaic-of-images)
 - [Create a VTT file that documents the mosaic of thumbnails](#create-a-vtt-file-that-documents-the-mosaic-of-thumbnails)
-- [create.js parameters documentation](#create.js-parameters-documentation)
+- [create.js parameters documentation](#parameters-documentation)
 - [Issues](#issues)
 - [License for rmp-create-vtt-thumbnails](#license-for-rmp-create-vtt-thumbnails)
 - [Radiant Media Player](#radiant-media-player)
@@ -44,7 +44,7 @@ node create.js 596 assets/bbb-sprite.jpg output/bbb-thumbnails.vtt 5 128 72 11
 ```
 See assets/ folder for ready-to-use mosaic image examples. See output/ folder for examples of VTT files generated with the create.js script.
 
-## create.js parameters documentation
+## Parameters documentation
 
 `node create.js duration spriteFileLocation outputVTTFileName gapBetweenFrames thumbnailWidth thumbnailHeight tileSize`
 
