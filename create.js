@@ -28,7 +28,7 @@ const _secondsToHRTime = function (time) {
     let hours = 0;
     if (minutes > 59) {
       hours = Math.floor(time * 1.0 / 3600);
-      minutes = Math.floor(((time * 1.0 / 3600) % 1) * 60);
+      minutes = Math.floor((time - hours * 3600) / 60);
       seconds = Math.floor(time % 60);
     }
     if (seconds < 10) {
