@@ -1,6 +1,6 @@
 # rmp-create-vtt-thumbnails
 
-A helper script to easily create VTT files that works with [Radiant Media Player preview thumbnails feature](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html) (could work with other players that follow the same VTT-based preview thumbnails implementation). 
+A helper script to easily create VTT files that works with [Radiant Media Player preview thumbnails feature](https://www.radiantmediaplayer.com/docs/latest/preview-thumbnails.html) (could work with other players that follow the same VTT-based preview thumbnails implementation).
 
 This process has been tested for node.js 8.11+ on Windows 10 and Ubuntu 16 LTS.
 
